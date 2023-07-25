@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+
+    <h1>This is javascript with HTML</h1>
+
+    <h2>This is heading 2</h2>
+
+    <h3>This is heading 3</h3>
+
+    <!-- Add Function -->
+    Value of function Add is: <h4 style="font-size: 35px;">Sum Value</h4>
+    <button>
+        Alert Function!
+    </button>
+
+    <script>
+        console.log("Hello Javascript from HTML");
+
+        const heading1 = document.querySelector("h1");
+        heading1.innerHTML = "Changed from JavaScript";
+
+        // Do the same for heading 2 and heading 3
+        function add(value1, value2){
+            let sum = value1 + value2;
+            return sum;
+        }
+
+        const heading4 = document.querySelector("h4");
+        heading4.innerHTML = add(4,5);
+
+        // Show sum value to h4
+        const button = document.querySelector("button");
+        button.onclick = () => {
+            // alert("Button has been clicked!")
+            promptValue()
+        }
+
+        // Create alert function
+
+
+        document.querySelector("html").addEventListener("click", function() {
+            alert("HTML area has been clicked!")
+        })
+
+        function promptValue(){
+            const name = prompt("Please enter your name!");
+            heading4.innerHTML = name;
+            heading4.textContent = `The University name that you entered is ${name}`;
+        }
+
+
+
+    </script>
+</body>
+</html>
